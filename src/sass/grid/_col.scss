@@ -1,0 +1,52 @@
+.col {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.col--reverse {
+  flex-direction: reverse;
+}
+
+@function calcGridColumnWidth($columnIndex) {
+  @return ($columnIndex / $gridMaxColumns) * 100%;
+}
+
+@mixin createGridColumns($gridSize) {
+  .col--#{$gridSize} {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    max-width: 100%;
+  }
+
+  @for $i from 1 through $gridMaxColumns {
+    $width: calcGridColumnWidth($i);
+
+    .col--#{$gridSize}--#{$i} {
+      -webkit-flex-basis: $width;
+      -ms-flex-preferred-size: $width;
+      flex-basis: $width;
+      max-width: $width;
+    }
+  }
+
+  @for $i from 1 through $gridMaxColumns {
+    $width: calcGridColumnWidth($i);
+
+    .col--#{$gridSize}--offset--#{$i} {
+      margin-left: $width;
+    }
+  }
+}
+
+@include createGridColumns(xs);
+@include mediaquery($sm-up) { @include createGridColumns(sm); }
+@include mediaquery($md-up) { @include createGridColumns(md); }
+@include mediaquery($lg-up) { @include createGridColumns(lg); }
+@include mediaquery($xl-up) { @include createGridColumns(xl); }

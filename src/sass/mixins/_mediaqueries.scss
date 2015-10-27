@@ -1,0 +1,18 @@
+/*
+  USAGE:
+
+  .content {
+    width: 100px;
+
+    @include mediaquery(md-down) {
+      width: 200px;
+    }
+
+  }
+*/
+
+@mixin mediaquery($mq) {
+  @media #{$mq} {
+    @content;
+  }
+}

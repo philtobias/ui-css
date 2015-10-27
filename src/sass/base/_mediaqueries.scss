@@ -1,0 +1,40 @@
+$screen: "only screen";
+
+// Orientations
+$landscape: "#{$screen} and (orientation: landscape)";
+$portrait: "#{$screen} and (orientation: portrait)";
+
+// XS
+$lower-xs: 0px !default;
+$upper-xs: 480px !default;
+$xs-up: $screen;
+$xs-down: "#{$screen} and (max-width: #{$upper-xs})";
+$xs-only: "#{$screen} and (max-width: #{$upper-xs})";
+
+// Small
+$lower-sm: 481px !default;
+$upper-sm: 800px !default;
+$sm-up: "#{$screen} and (min-width: #{$lower-sm})";
+$sm-down: "#{$screen} and (max-width: #{$upper-sm})";
+$sm-only: "#{$screen} and (min-width: #{$lower-sm}) and (max-width:#{$upper-sm})";
+
+// Medium
+$lower-md: 801px !default;
+$upper-md: 1040px !default;
+$md-up: "#{$screen} and (min-width: #{$lower-md})";
+$md-down: "#{$screen} and (max-width: #{$upper-md})";
+$md-only: "#{$screen} and (min-width: #{$lower-md}) and (max-width: #{$upper-md})";
+
+// Large
+$lower-lg: 1041px !default;
+$upper-lg: 1440px !default;
+$lg-up: "#{$screen} and (min-width: #{$lower-lg})";
+$lg-down: "#{$screen} and (max-width: #{$upper-lg})";
+$lg-only: "#{$screen} and (min-width: #{$lower-lg}) and (max-width: #{$upper-lg})";
+
+// X large
+$lower-xl: 1441px !default;
+$upper-xl: 1920px !default;
+$xl-up: "#{$screen} and (min-width: #{$lower-xl})";
+$xl-down: "#{$screen} and (max-width: #{$upper-xl})";
+$xl-only: "#{$screen} and (min-width: #{$lower-xl}) and (max-width: #{$upper-xl})";

@@ -1,0 +1,19 @@
+html {
+  font-family: $base-font-family;
+}
+
+pre {
+  padding: 1em;
+  border: 1px solid #e6e6e6;
+  border-left-width: 5px;
+  margin: 1.5em 0;
+  font-size: 14px;
+  background: #fcfcfc;
+  white-space: pre;
+  word-wrap: normal;
+  line-height: 1.4rem;
+}
+
+code {
+  color: #000;
+}

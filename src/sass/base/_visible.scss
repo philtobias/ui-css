@@ -1,0 +1,60 @@
+@include mediaquery($xs-only) {
+  .visible--sm,
+  .visible--smUp,
+  .visible--md,
+  .visible--mdUp,
+  .visible--lg,
+  .visible--lgUp,
+  .visible--xlg,
+  .visible--xlgUp {
+    display: none !important;
+  }
+}
+
+@include mediaquery($sm-only) {
+  .visible--xs,
+  .visible--md,
+  .visible--mdUp,
+  .visible--lg,
+  .visible--lgUp,
+  .visible--xlg,
+  .visible--xlgUp {
+    display: none !important;
+  }
+}
+
+@include mediaquery($md-only) {
+  .visible--xs,
+  .visible--sm,
+  .visible--smDown,
+  .visible--lg,
+  .visible--lgUp,
+  .visible--xlg,
+  .visible--xlgUp {
+    display: none !important;
+  }
+}
+
+@include mediaquery($lg-only) {
+  .visible--xs,
+  .visible--sm,
+  .visible--smDown,
+  .visible--md,
+  .visible--mdDown,
+  .visible--xlg,
+  .visible--xlgUp {
+    display: none !important;
+  }
+}
+
+@include mediaquery($xl-only) {
+  .visible--xs,
+  .visible--sm,
+  .visible--smDown,
+  .visible--md,
+  .visible--mdDown,
+  .visible--lg,
+  .visible--lgDown {
+    display: none !important;
+  }
+}
